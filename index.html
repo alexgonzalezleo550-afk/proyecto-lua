@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Tienda Lua</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner container">
+      <div class="brand">
+        <a href="#" class="logo">
+          <svg width="60" height="60" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+            <defs>
+              <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00d4ff"/>
+                <stop offset="100%" stop-color="#ff00ff"/>
+              </linearGradient>
+            </defs>
+            <circle cx="50" cy="50" r="45" fill="none" stroke="url(#grad1)" stroke-width="4"/>
+            <path d="M30 40 Q50 25 70 40 Q60 55 50 70 Q40 55 30 40" fill="none" stroke="url(#grad1)" stroke-width="3" stroke-linecap="round"/>
+            <text x="50" y="58" font-family="Poppins, sans-serif" font-weight="700" font-size="28" fill="url(#grad1)" text-anchor="middle">LUA</text>
+          </svg>
+        </a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <nav class="main-nav" id="menu">
+        <a href="#" data-section="inicio" class="active">Inicio</a>
+        <a href="#" data-section="productos">Productos</a>
+        <a href="#" data-section="ofertas">Ofertas</a>
+        <a href="#" data-section="sobre">Sobre nosotros</a>
+        <a href="#" data-section="contacto">Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <a class="cart" id="cart-toggle">Carrito <span class="badge" id="cart-count">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <section id="inicio" class="hero section active">
+    <div class="container">
+      <h1 class="hero-title">Tienda Lua</h1>
+      <p class="hero-desc">Descubre nuestras cremas, perfumes y ropa con estilo.</p>
+      <h2 class="section-title">Destacados</h2>
+      <div id="destacados-container" class="product-grid"></div>
+    </div>
+  </section>
+
+  <section id="productos" class="container section">
+    <h2 class="section-title">Catálogo Completo</h2>
+    <div class="category">
+      <h3 class="category-title">Cremas</h3>
+      <div class="product-grid" data-category="cremas">
+        <article class="product"><img src="crema.jpg" alt="Crema Aloe Glow"><h3>Crema Aloe Glow</h3><p class="desc">50ml • Aloe vera, vitamina E • Hidratación profunda • 28 unidades</p><p class="price">$199.00</p><button class="btn add-to-cart" data-name="Crema Aloe Glow" data-price="199.00">Agregar</button></article>
+        <article class="product"><img src="crema2.jpg" alt="NutriKarité"><h3>NutriKarité</h3><p class="desc">100ml • Manteca de karité, aceite de coco • Nutrición intensa • 15 unidades</p><p class="price">$199.00</p><button class="btn add-to-cart" data-name="NutriKarité" data-price="199.00">Agregar</button></article>
+        <article class="product"><img src="crema3.jpg" alt="Colágeno Nocturno"><h3>Colágeno Nocturno</h3><p class="desc">50ml • Colágeno, ácido hialurónico • Reparación nocturna • 22 unidades</p><p class="price">$199.00</p><button class="btn add-to-cart" data-name="Colágeno Nocturno" data-price="199.00">Agregar</button></article>
+        <article class="product"><img src="crema4.jpg" alt="Solar Té Verde"><h3>Solar Té Verde</h3><p class="desc">75ml • SPF 30, extracto de té verde • Protección solar • 30 unidades</p><p class="price">$199.00</p><button class="btn add-to-cart" data-name="Solar Té Verde" data-price="199.00">Agregar</button></article>
+        <article class="product"><img src="crema5.jpg" alt="Retinol Lift"><h3>Retinol Lift</h3><p class="desc">30ml • Retinol, péptidos • Anti-edad • 18 unidades</p><p class="price">$199.00</p><button class="btn add-to-cart" data-name="Retinol Lift" data-price="199.00">Agregar</button></article>
+        <article class="product"><img src="crema6.jpg" alt="Avena Calma"><h3>Avena Calma</h3><p class="desc">100ml • Avena coloidal • Piel sensible • 25 unidades</p><p class="price">$199.00</p><button class="btn add-to-cart" data-name="Avena Calma" data-price="199.00">Agregar</button></article>
+        <article class="product"><img src="crema7.jpg" alt="Glicólico Suave"><h3>Glicólico Suave</h3><p class="desc">50ml • Ácido glicólico 5% • Exfoliante suave • 20 unidades</p><p class="price">$199.00</p><button class="btn add-to-cart" data-name="Glicólico Suave" data-price="199.00">Agregar</button></article>
+        <article class="product"><img src="crema8.jpg" alt="Lavanda Body"><h3>Lavanda Body</h3><p class="desc">200ml • Aceite esencial de lavanda • Corporal relajante • 35 unidades</p><p class="price">$199.00</p><button class="btn add-to-cart" data-name="Lavanda Body" data-price="199.00">Agregar</button></article>
+        <article class="product"><img src="crema9.jpg" alt="Manos Ceramidas"><h3>Manos Ceramidas</h3><p class="desc">75ml • Glicerina, ceramidas • Reparación intensa • 40 unidades</p><p class="price">$199.00</p><button class="btn add-to-cart" data-name="Manos Ceramidas" data-price="199.00">Agregar</button></article>
+        <article class="product"><img src="crema10.jpg" alt="Niacina Control"><h3>Niacina Control</h3><p class="desc">50ml • Niacinamida 10% • Control de grasa • 17 unidades</p><p class="price">$199.00</p><button class="btn add-to-cart" data-name="Niacina Control" data-price="199.00">Agregar</button></article>
+        <article class="product"><img src="crema11.jpg" alt="Árbol Té Clear"><h3>Árbol Té Clear</h3><p class="desc">50ml • Árbol de té, zinc • Antiacné • 23 unidades</p><p class="price">$199.00</p><button class="btn add-to-cart" data-name="Árbol Té Clear" data-price="199.00">Agregar</button></article>
+        <article class="product"><img src="crema12.jpg" alt="Vitamina C Glow"><h3>Vitamina C Glow</h3><p class="desc">30ml • Vitamina C 15% • Iluminadora • 19 unidades</p><p class="price">$199.00</p><button class="btn add-to-cart" data-name="Vitamina C Glow" data-price="199.00">Agregar</button></article>
+        <article class="product"><img src="crema13.jpg" alt="Pies Urea Fresh"><h3>Pies Urea Fresh</h3><p class="desc">100ml • Urea 10%, mentol • Refrescante • 32 unidades</p><p class="price">$199.00</p><button class="btn add-to-cart" data-name="Pies Urea Fresh" data-price="199.00">Agregar</button></article>
+        <article class="product"><img src="crema14.jpg" alt="Ojos Café"><h3>Ojos Café</h3><p class="desc">15ml • Cafeína, péptidos • Anti-ojeras • 14 unidades</p><p class="price">$199.00</p><button class="btn add-to-cart" data-name="Ojos Café" data-price="199.00">Agregar</button></article>
+        <article class="product"><img src="crema15.jpg" alt="Labial Cacao"><h3>Labial Cacao</h3><p class="desc">10g • Manteca de cacao, vitamina E • Reparador • 45 unidades</p><p class="price">$199.00</p><button class="btn add-to-cart" data-name="Labial Cacao" data-price="199.00">Agregar</button></article>
+      </div>
+    </div>
+
+    <div class="category">
+      <h3 class="category-title">Perfumes</h3>
+      <div class="product-grid" data-category="perfumes">
+        <article class="product"><img src="perfume.jpg" alt="Jazmín Eterno"><h3>Jazmín Eterno</h3><p class="desc">100ml • Jazmín, rosa, vainilla • Eau de Parfum • 12 unidades</p><p class="price">$349.00</p><button class="btn add-to-cart" data-name="Jazmín Eterno" data-price="349.00">Agregar</button></article>
+        <article class="product"><img src="perfume2.jpg" alt="Cítrico Cedro"><h3>Cítrico Cedro</h3><p class="desc">100ml • Limón, bergamota, cedro • Fresco cítrico • 18 unidades</p><p class="price">$349.00</p><button class="btn add-to-cart" data-name="Cítrico Cedro" data-price="349.00">Agregar</button></article>
+        <article class="product"><img src="perfume3.jpg" alt="Ámbar Oriental"><h3>Ámbar Oriental</h3><p class="desc">100ml • Ámbar, pachulí, canela • Oriental cálido • 10 unidades</p><p class="price">$349.00</p><button class="btn add-to-cart" data-name="Ámbar Oriental" data-price="349.00">Agregar</button></article>
+        <article class="product"><img src="perfume4.jpg" alt="Té Blanco Verde"><h3>Té Blanco Verde</h3><p class="desc">100ml • Té blanco, bambú • Unisex verde • 22 unidades</p><p class="price">$349.00</p><button class="btn add-to-cart" data-name="Té Blanco Verde" data-price="349.00">Agregar</button></article>
+        <article class="product"><img src="perfume5.jpg" alt="Oud Negro"><h3>Oud Negro</h3><p class="desc">50ml • Oud, azafrán, rosa negra • Edición limitada • 8 unidades</p><p class="price">$349.00</p><button class="btn add-to-cart" data-name="Oud Negro" data-price="349.00">Agregar</button></article>
+        <article class="product"><img src="perfume6.jpg" alt="Caramelo Dulce"><h3>Caramelo Dulce</h3><p class="desc">100ml • Caramelo, praliné, vainilla • Gourmand • 15 unidades</p><p class="price">$349.00</p><button class="btn add-to-cart" data-name="Caramelo Dulce" data-price="349.00">Agregar</button></article>
+        <article class="product"><img src="perfume7.jpg" alt="Océano Marino"><h3>Océano Marino</h3><p class="desc">100ml • Sal marina, algas • Acuático • 20 unidades</p><p class="price">$349.00</p><button class="btn add-to-cart" data-name="Océano Marino" data-price="349.00">Agregar</button></article>
+        <article class="product"><img src="perfume8.jpg" alt="Tropical Fruit"><h3>Tropical Fruit</h3><p class="desc">100ml • Mango, piña, coco • Frutal tropical • 25 unidades</p><p class="price">$349.00</p><button class="btn add-to-cart" data-name="Tropical Fruit" data-price="349.00">Agregar</button></article>
+        <article class="product"><img src="perfume9.jpg" alt="Sándalo Tabaco"><h3>Sándalo Tabaco</h3><p class="desc">100ml • Sándalo, vetiver, tabaco • Amaderado • 14 unidades</p><p class="price">$349.00</p><button class="btn add-to-cart" data-name="Sándalo Tabaco" data-price="349.00">Agregar</button></article>
+        <article class="product"><img src="perfume10.jpg" alt="Naranjo Miel"><h3>Naranjo Miel</h3><p class="desc">100ml • Flor de naranjo, miel • Dulce floral • 19 unidades</p><p class="price">$349.00</p><button class="btn add-to-cart" data-name="Naranjo Miel" data-price="349.00">Agregar</button></article>
+        <article class="product"><img src="perfume11.jpg" alt="Especias Calientes"><h3>Especias Calientes</h3><p class="desc">100ml • Clavo, cardamomo • Especiado • 16 unidades</p><p class="price">$349.00</p><button class="btn add-to-cart" data-name="Especias Calientes" data-price="349.00">Agregar</button></article>
+        <article class="product"><img src="perfume12.jpg" alt="Lima Menta"><h3>Lima Menta</h3><p class="desc">100ml • Lima, menta, albahaca • Cítrico verde • 21 unidades</p><p class="price">$349.00</p><button class="btn add-to-cart" data-name="Lima Menta" data-price="349.00">Agregar</button></article>
+        <article class="product"><img src="perfume13.jpg" alt="Cuero Ahumado"><h3>Cuero Ahumado</h3><p class="desc">100ml • Cuero, incienso, mirra • Ahumado • 11 unidades</p><p class="price">$349.00</p><button class="btn add-to-cart" data-name="Cuero Ahumado" data-price="349.00">Agregar</button></article>
+        <article class="product"><img src="perfume14.jpg" alt="Loto Lirio"><h3>Loto Lirio</h3><p class="desc">100ml • Loto, lirio, musgo • Floral acuoso • 17 unidades</p><p class="price">$349.00</p><button class="btn add-to-cart" data-name="Loto Lirio" data-price="349.00">Agregar</button></article>
+        <article class="product"><img src="perfume15.jpg" alt="Café Tonka"><h3>Café Tonka</h3><p class="desc">100ml • Café, chocolate, tonka • Gourmand oscuro • 13 unidades</p><p class="price">$349.00</p><button class="btn add-to-cart" data-name="Café Tonka" data-price="349.00">Agregar</button></article>
+      </div>
+    </div>
+
+    <div class="category">
+      <h3 class="category-title">Playeras</h3>
+      <div class="product-grid" data-category="playeras">
+        <article class="product"><img src="playera.jpg" alt="Camiseta EcoSoft"><h3>Camiseta EcoSoft</h3><p class="desc">Tallas: S, M, L, XL • 100% algodón orgánico • 32 unidades</p><p class="price">$249.00</p><div class="size-select"><select class="size-dropdown"><option value="">Talla</option><option>S</option><option>M</option><option>L</option><option>XL</option></select></div><button class="btn add-to-cart" data-name="Camiseta EcoSoft" data-price="249.00">Agregar</button></article>
+        <article class="product"><img src="playera2.jpg" alt="Urban Black"><h3>Urban Black</h3><p class="desc">Tallas: S, M, L, XL • Estampado minimalista • 28 unidades</p><p class="price">$249.00</p><div class="size-select"><select class="size-dropdown"><option value="">Talla</option><option>S</option><option>M</option><option>L</option><option>XL</option></select></div><button class="btn add-to-cart" data-name="Urban Black" data-price="249.00">Agregar</button></article>
+        <article class="product"><img src="playera3.jpg" alt="Oversize Chill"><h3>Oversize Chill</h3><p class="desc">Tallas: M, L, XL • Corte holgado • 25 unidades</p><p class="price">$249.00</p><div class="size-select"><select class="size-dropdown"><option value="">Talla</option><option>M</option><option>L</option><option>XL</option></select></div><button class="btn add-to-cart" data-name="Oversize Chill" data-price="249.00">Agregar</button></article>
+        <article class="product"><img src="playera4.jpg" alt="Dry-Fit Sport"><h3>Dry-Fit Sport</h3><p class="desc">Tallas: S, M, L, XL • Tecnología anti-sudor • 30 unidades</p><p class="price">$249.00</p><div class="size-select"><select class="size-dropdown"><option value="">Talla</option><option>S</option><option>M</option><option>L</option><option>XL</option></select></div><button class="btn add-to-cart" data-name="Dry-Fit Sport" data-price="249.00">Agregar</button></article>
+        <article class="product"><img src="playera5.jpg" alt="Retro Logo"><h3>Retro Logo</h3><p class="desc">Tallas: S, M, L • Logo bordado • 22 unidades</p><p class="price">$249.00</p><div class="size-select"><select class="size-dropdown"><option value="">Talla</option><option>S</option><option>M</option><option>L</option></select></div><button class="btn add-to-cart" data-name="Retro Logo" data-price="249.00">Agregar</button></article>
+        <article class="product"><img src="playera6.jpg" alt="V-Neck Layer"><h3>V-Neck Layer</h3><p class="desc">Tallas: S, M, L, XL • Cuello en V • 35 unidades</p><p class="price">$249.00</p><div class="size-select"><select class="size-dropdown"><option value="">Talla</option><option>S</option><option>M</option><option>L</option><option>XL</option></select></div><button class="btn add-to-cart" data-name="V-Neck Layer" data-price="249.00">Agregar</button></article>
+        <article class="product"><img src="playera7.jpg" alt="Worker Pocket"><h3>Worker Pocket</h3><p class="desc">Tallas: M, L, XL • Bolsillo en pecho • 18 unidades</p><p class="price">$249.00</p><div class="size-select"><select class="size-dropdown"><option value="">Talla</option><option>M</option><option>L</option><option>XL</option></select></div><button class="btn add-to-cart" data-name="Worker Pocket" data-price="249.00">Agregar</button></article>
+        <article class="product"><img src="playera8.jpg" alt="Long Sleeve Fall"><h3>Long Sleeve Fall</h3><p class="desc">Tallas: S, M, L • Manga larga • 27 unidades</p><p class="price">$249.00</p><div class="size-select"><select class="size-dropdown"><option value="">Talla</option><option>S</option><option>M</option><option>L</option></select></div><button class="btn add-to-cart" data-name="Long Sleeve Fall" data-price="249.00">Agregar</button></article>
+        <article class="product"><img src="playera9.jpg" alt="Pop Art Print"><h3>Pop Art Print</h3><p class="desc">Tallas: S, M, L, XL • Estampado gráfico • 20 unidades</p><p class="price">$249.00</p><div class="size-select"><select class="size-dropdown"><option value="">Talla</option><option>S</option><option>M</option><option>L</option><option>XL</option></select></div><button class="btn add-to-cart" data-name="Pop Art Print" data-price="249.00">Agregar</button></article>
+        <article class="product"><img src="playera10.jpg" alt="Tie-Dye Unique"><h3>Tie-Dye Unique</h3><p class="desc">Tallas: M, L • Artesanal, única • 15 unidades</p><p class="price">$249.00</p><div class="size-select"><select class="size-dropdown"><option value="">Talla</option><option>M</option><option>L</option></select></div><button class="btn add-to-cart" data-name="Tie-Dye Unique" data-price="249.00">Agregar</button></article>
+        <article class="product"><img src="playera11.jpg" alt="Hoodie Tee"><h3>Hoodie Tee</h3><p class="desc">Tallas: S, M, L, XL • Con capucha ligera • 24 unidades</p><p class="price">$249.00</p><div class="size-select"><select class="size-dropdown"><option value="">Talla</option><option>S</option><option>M</option><option>L</option><option>XL</option></select></div><button class="btn add-to-cart" data-name="Hoodie Tee" data-price="249.00">Agregar</button></article>
+        <article class="product"><img src="playera12.jpg" alt="Basic Pack 3"><h3>Basic Pack 3</h3><p class="desc">Tallas: S, M, L • Pack de 3 colores • 40 unidades</p><p class="price">$249.00</p><div class="size-select"><select class="size-dropdown"><option value="">Talla</option><option>S</option><option>M</option><option>L</option></select></div><button class="btn add-to-cart" data-name="Basic Pack 3" data-price="249.00">Agregar</button></article>
+        <article class="product"><img src="playera13.jpg" alt="Night Run Reflect"><h3>Night Run Reflect</h3><p class="desc">Tallas: M, L, XL • Reflectante • 19 unidades</p><p class="price">$249.00</p><div class="size-select"><select class="size-dropdown"><option value="">Talla</option><option>M</option><option>L</option><option>XL</option></select></div><button class="btn add-to-cart" data-name="Night Run Reflect" data-price="249.00">Agregar</button></article>
+        <article class="product"><img src="playera14.jpg" alt="Motivation Quote"><h3>Motivation Quote</h3><p class="desc">Tallas: S, M, L • Mensaje motivacional • 26 unidades</p><p class="price">$249.00</p><div class="size-select"><select class="size-dropdown"><option value="">Talla</option><option>S</option><option>M</option><option>L</option></select></div><button class="btn add-to-cart" data-name="Motivation Quote" data-price="249.00">Agregar</button></article>
+        <article class="product"><img src="playera15.jpg" alt="Artist Collab"><h3>Artist Collab</h3><p class="desc">Tallas: M, L • Edición limitada • 10 unidades</p><p class="price">$249.00</p><div class="size-select"><select class="size-dropdown"><option value="">Talla</option><option>M</option><option>L</option></select></div><button class="btn add-to-cart" data-name="Artist Collab" data-price="249.00">Agregar</button></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="ofertas" class="container section">
+    <h2 class="section-title">Ofertas Especiales</h2>
+    <div class="promo-grid">
+      <div class="promo">
+        <strong>2x1 en Cremas</strong><br>
+        <small>Lleva 2 cremas por el precio de 1</small>
+      </div>
+      <div class="promo">
+        <strong>20% OFF en Perfumes</strong><br>
+        <small>Aplica en todos los perfumes</small>
+      </div>
+      <div class="promo">
+        <strong>Envío GRATIS</strong><br>
+        <small>En compras mayores a $999</small>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="container section">
+    <h2 class="section-title">Sobre Tienda Lua</h2>
+    <p><strong>Tienda Lua</strong> nace en 2023 con la pasión de ofrecer productos de belleza y moda de alta calidad a precios accesibles. Nos especializamos en cremas naturales, perfumes únicos y playeras con diseño original.</p>
+    
+    <h3>Nuestra Misión</h3>
+    <p>Hacer que cada cliente se sienta especial con productos que cuidan su piel, su aroma y su estilo, sin comprometer su bolsillo.</p>
+    
+    <h3>Nuestra Visión</h3>
+    <p>Ser la tienda en línea #1 de México en productos de cuidado personal y moda urbana, con envíos rápidos y atención personalizada.</p>
+    
+    <h3>Valores</h3>
+    <ul>
+      <li>Calidad garantizada</li>
+      <li>Atención agradable</li>
+      <li>Envíos a todo México</li>
+      <li>Precios justos</li>
+    </ul>
+  </section>
+
+  <section id="contacto" class="container section">
+    <h2 class="section-title">Contacto</h2>
+    <div class="contact-grid">
+      <div>
+        <p><strong>Envíanos un mensaje:</strong></p>
+        <form id="contact-form" class="contact-form">
+          <input placeholder="Nombre" required>
+          <input placeholder="Correo" type="email" required>
+          <textarea placeholder="Mensaje" rows="5" required></textarea>
+          <button class="btn" type="submit">Enviar</button>
+        </form>
+      </div>
+      <div class="contact-info">
+        <p><strong>WhatsApp:</strong></p>
+        <a href="https://wa.me/525665459207" target="_blank" class="whatsapp-btn">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="24"> +52 566 545 9207
+        </a>
+        <p><strong>Correo:</strong></p>
+        <a href="mailto:alexgonzalezlezleo550@gmail.com">alexgonzalezlezleo550@gmail.com</a>
+        <p><strong>Horario:</strong> Lunes a Domingo, 9:00 AM - 9:00 PM</p>
+      </div>
+    </div>
+  </section>
+
+  <aside id="carrito" class="cart-panel">
+    <div class="cart-header">
+      <h3>Tu carrito</h3>
+      <button id="close-cart" class="close-btn">X</button>
+    </div>
+    <div id="cart-items"></div>
+    <p id="cart-empty">Tu carrito está vacío.</p>
+    <p id="cart-total">Total: $0.00</p>
+    <p id="cart-offers" style="color: green; font-weight: bold;"></p>
+    <button id="pagar-btn" class="btn">Ir a pagar</button>
+  </aside>
+
+  <div id="modal-nombre" class="modal">
+    <div class="modal-content">
+      <h3>Ingresa tu nombre</h3>
+      <input type="text" id="nombre-cliente" placeholder="Ej: Ana García" required>
+      <button id="confirmar-pago">Pagar e Imprimir</button>
+      <button id="cancelar-pago">Cancelar</button>
+    </div>
+  </div>
+
+  <div id="ticket-print" style="display: none;">
+    <div class="text-center">
+      <h3>TIENDA LUA</h3>
+      <svg width="60" height="60" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="45" fill="none" stroke="#000" stroke-width="3"/>
+        <text x="50" y="58" font-family="Courier New, monospace" font-weight="bold" font-size="24" fill="#000" text-anchor="middle">LUA</text>
+      </svg>
+      <p>Gracias por tu compra</p>
+    </div>
+    <hr>
+    <p><strong>Folio:</strong> <span id="folio"></span></p>
+    <p><strong>Fecha:</strong> <span id="fecha"></span></p>
+    <p><strong>Cliente:</strong> <span id="cliente"></span></p>
+    <hr>
+    <div id="items-ticket"></div>
+    <hr>
+    <p class="text-right"><strong>Subtotal:</strong> <span id="subtotal-ticket"></span></p>
+    <p class="text-right"><strong>IVA (16%):</strong> <span id="iva-ticket"></span></p>
+    <p class="text-right bold"><strong>TOTAL:</strong> <span id="total-ticket"></span></p>
+    <hr>
+    <p class="text-center">¡Vuelve pronto!</p>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Tienda Lua - Todos los derechos reservados</p>
+      <nav><a href="#">Privacidad</a> | <a href="#">Términos</a></nav>
+    </div>
+  </footer>
+</body>
+</html>
