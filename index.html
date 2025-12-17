@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Tienda Lua</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -69,7 +68,7 @@
         <article class="product"><img src="crema11.jpg" alt="Árbol Té Clear"><h3>Árbol Té Clear</h3><p class="desc">50ml • Árbol de té, zinc • Antiacné • 23 unidades</p><p class="price">$199.00</p><button class="btn add-to-cart" data-name="Árbol Té Clear" data-price="199.00">Agregar</button></article>
         <article class="product"><img src="crema12.jpg" alt="Vitamina C Glow"><h3>Vitamina C Glow</h3><p class="desc">30ml • Vitamina C 15% • Iluminadora • 19 unidades</p><p class="price">$199.00</p><button class="btn add-to-cart" data-name="Vitamina C Glow" data-price="199.00">Agregar</button></article>
         <article class="product"><img src="crema13.jpg" alt="Pies Urea Fresh"><h3>Pies Urea Fresh</h3><p class="desc">100ml • Urea 10%, mentol • Refrescante • 32 unidades</p><p class="price">$199.00</p><button class="btn add-to-cart" data-name="Pies Urea Fresh" data-price="199.00">Agregar</button></article>
-        <article class="product"><img src="crema14.jpg" alt="Ojos Café"><h3>Ojos Café</h3><p class="desc">15ml • Cafeína, péptidos • Anti-ojeras • 14 unidades</p><p class="price">$199.00</p><button class="btn add-to-cart" data-name="Ojos Café" data-price="199.00">Agregar</button></article>
+        <article class="product"><img src="crema14.jpg" alt="Ojos Café"><h3>Ojos Café</h3><p class="desc">15ml • Cafeína, péptidos • Anti-ojeras • 14 unidades</p><p><p class="price">$199.00</p><button class="btn add-to-cart" data-name="Ojos Café" data-price="199.00">Agregar</button></article>
         <article class="product"><img src="crema15.jpg" alt="Labial Cacao"><h3>Labial Cacao</h3><p class="desc">10g • Manteca de cacao, vitamina E • Reparador • 45 unidades</p><p class="price">$199.00</p><button class="btn add-to-cart" data-name="Labial Cacao" data-price="199.00">Agregar</button></article>
       </div>
     </div>
@@ -138,13 +137,10 @@
   <section id="sobre" class="container section">
     <h2 class="section-title">Sobre Tienda Lua</h2>
     <p><strong>Tienda Lua</strong> nace en 2023 con la pasión de ofrecer productos de belleza y moda de alta calidad a precios accesibles. Nos especializamos en cremas naturales, perfumes únicos y playeras con diseño original.</p>
-    
     <h3>Nuestra Misión</h3>
     <p>Hacer que cada cliente se sienta especial con productos que cuidan su piel, su aroma y su estilo, sin comprometer su bolsillo.</p>
-    
     <h3>Nuestra Visión</h3>
     <p>Ser la tienda en línea #1 de México en productos de cuidado personal y moda urbana, con envíos rápidos y atención personalizada.</p>
-    
     <h3>Valores</h3>
     <ul>
       <li>Calidad garantizada</li>
@@ -186,7 +182,7 @@
     <div id="cart-items"></div>
     <p id="cart-empty">Tu carrito está vacío.</p>
     <p id="cart-total">Total: $0.00</p>
-    <p id="cart-offers" style="color: green; font-weight: bold;"></p>
+    <p id="cart-offers"></p>
     <button id="pagar-btn" class="btn">Ir a pagar</button>
   </aside>
 
@@ -199,7 +195,7 @@
     </div>
   </div>
 
-  <div id="ticket-print" style="display: none;">
+  <div id="ticket-print">
     <div class="text-center">
       <h3>TIENDA LUA</h3>
       <svg width="60" height="60" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -225,8 +221,28 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© 2025 Tienda Lua - Todos los derechos reservados</p>
-      <nav><a href="#">Privacidad</a> | <a href="#">Términos</a></nav>
     </div>
   </footer>
+
+  <div id="chatbot-floating-btn">
+    <img src="logolua.png" alt="Lua" style="width:100%; height:100%; border-radius:50%; object-fit:cover; border:4px solid #fff; box-shadow:0 0 40px rgba(255,215,0,0.8);">
+  </div>
+
+  <div id="chatbot-container" class="closed">
+    <div class="chatbot-logo-header">
+      <img src="logolua.png" alt="Lua" class="logo-chatbot">
+      <h3 style="margin:0; color:#000; font-weight:900; font-size:19px; text-shadow:0 2px 4px rgba(0,0,0,0.3);">LUNA</h3>
+      <p style="margin:4px 0 0; color:#b8860b; font-size:13px;">Tu compa de confianza</p>
+    </div>
+    <div id="chatbot-header">
+      <button id="chatbot-close">X</button>
+    </div>
+    <div id="chatbot-messages"></div>
+    <div id="chatbot-quick-replies"></div>
+    <div id="chatbot-input-area">
+      <input type="text" id="chatbot-input" placeholder="Escribe aquí..." autocomplete="off">
+      <button id="chatbot-send"></button>
+    </div>
+  </div>
 </body>
 </html>
